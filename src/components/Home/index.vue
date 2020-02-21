@@ -21,7 +21,7 @@
           <li><a href="/about">了解腾讯</a></li>
           <li><a href="/video">视频干货</a></li>
         </ul>
-        <div class="members">
+        <div class="member">
           <div class="nolog">
             <a href="#" @click="login">登录</a>
           </div>
@@ -71,7 +71,7 @@
               </div>
               <div class="job_post" @mouseover="animate_campus=true" @mouseleave="animate_campus=false">
                 <h2 class="job_title" :style="{ 'transform': `translateY(${animate_campus ? '0' : '20%'})` }"></h2>
-                <ul class="job_list" :class="{ 'animated fadeInDownSmall': animate_campus }" :style="{ 'opacity': Number(animate_campus) }">
+                <ul class="job_list" :class="{ 'animated fadeInDownSmall': animate_campus }">
                   <li><a href="/post">校园招聘</a></li>
                   <li><a href="https://careers.tencent.com/MBA.html" target="_blank">MBA招聘</a></li>
                 </ul>
@@ -83,7 +83,7 @@
               </div>
               <div class="job_post" @mouseover="animate_intern=true" @mouseleave="animate_intern=false">
                 <h2 class="job_title" :style="{ 'transform': `translateY(${animate_intern ? '0' : '20%'})` }"></h2>
-                <ul class="job_list" :class="{ 'animated fadeInDownSmall': animate_intern }" :style="{ 'opacity': Number(animate_intern) }">
+                <ul class="job_list" :class="{ 'animated fadeInDownSmall': animate_intern }">
                   <li><a href="/post">暑期实习</a></li>
                   <li><a href="/post">日常实习</a></li>
                   <li><a href="/post">Pre留学生实习</a></li>
@@ -327,7 +327,7 @@ export default {
             @media screen and (max-width: 1279px)
               margin: 0 1.2rem
             float: left
-        .members
+        .member
           position: absolute
           top: 6px
           right: 0
@@ -576,6 +576,9 @@ export default {
                 @media screen and (max-width: 1279px)
                   width: 86%
                   height: 90%
+                @media screen and (min-width: 1280px) and (max-width: 1599px)
+                  width: 90%
+                  height: 94%
         .btns_slider
           & > *
             display: block
@@ -640,4 +643,144 @@ export default {
             opacity: 1
           &:hover
             opacity: 1
+
+  @media screen and (max-device-width : 480px)
+    html
+      font-size: 50%
+    body
+      min-width: auto
+      min-height: auto
+    .home
+      .bg
+        .wave_items
+          width: 150%
+          left: 50%
+          margin-left: -75%
+          margin-top: -80%
+      .container
+        min-width: auto
+        min-height: auto
+        .header
+          top: 0
+          left: 0
+          right: 0
+          .logo
+            margin-right: 0
+            width: 115px
+            position: absolute
+            top: 14px
+            left: 50%
+            margin-left: -57px
+            float: none
+          .nav
+            display: none
+          .member
+            top: 22px
+            right: 4%
+            .nolog
+              a
+                background: url("icon-mobile-login.png") center no-repeat
+                background-size: contain
+                width: 19px
+                height: 19px
+                display: block
+                font-size: 0
+        .banners
+          .news
+            .slogan
+              width: 86%
+              top: -2rem
+            .slogan_title
+              width: 80%
+              top: -12%
+            .timeline
+              width: 100%
+              margin: 0 3%
+              top: 57%
+              .wrap_timeline
+                width: 100%
+                top: 57%
+                .wrap_process_bar
+                  height: 3px
+                  margin-bottom: 8px
+                  .wrap_process_circle
+                    .process_circle
+                      width: 16px
+                      height: 16px
+                      top: -5px
+                      right: -8px
+                .wrap_timeline_text
+                  padding: 0 10%
+                  .time_point
+                    font-size: 1rem
+            .btns
+              width: 200px
+              top: 73%
+              & > *
+                width: 90px
+                height: 30px
+                line-height: 30px
+                font-size: 1.5rem
+              .btn_s
+                margin-right: 17px
+          .jobs
+            .wrap_jobs
+              width: 80%
+              height: 75%
+              & > *
+                float: none
+                width: 100%
+                height: 48%
+                box-sizing: border-box
+                padding: 7%
+                .wrap_job_bg
+                  right: -8%
+                  bottom: -5%
+                .job_post
+                  .job_list
+                    opacity: 1
+                    font-size: 16px
+                    line-height: 2.5
+                    margin-top: 20px
+                    @media screen and (max-device-width : 320px)
+                      margin-top: 12px
+                      line-height: 1.8
+              .campus_recruitment
+                .job_post
+                  .job_title
+                    width: 117px
+              .intern_recruitment
+                margin-top: 18px
+                animation-delay: 0
+                .job_post
+                  .job_title
+                    width: 129px
+          .talks
+            .wrap_talks
+              width: 80%
+              height: 75%
+              .cont_talks
+                .bg_talks
+                  width: 100%
+                  height: 100%
+                  background: url("bg_mobile_talks_1210.png") center no-repeat
+                  background-size: contain
+          .btns_slider
+            .btn_prev
+              width: 13px
+              height: 24px
+              background-size: cover
+              left: 3%
+            .btn_next
+              width: 13px
+              height: 24px
+              background-size: cover
+              right: 3%
+      .wrap_buttons
+        .buttons
+          padding: 0
+          li
+          height: 44px
+          line-height: 44px
+          font-size: 1.5rem
 </style>
