@@ -495,8 +495,10 @@ export default {
                     margin-top: 30px
                   margin-left: 4px
                   text-align: left
-                  li > a:hover
-                    color: #d9b572
+                  li > a
+                    color: #2762f3
+                    &:hover
+                      color: #d9b572
                   &.fadeInDownSmall
                     animation-name: fadeInDownSmall
                     @keyframes fadeInDownSmall
@@ -742,9 +744,6 @@ export default {
                     font-size: 16px
                     line-height: 2.5
                     margin-top: 20px
-                    @media screen and (max-device-width : 320px)
-                      margin-top: 12px
-                      line-height: 1.8
               .campus_recruitment
                 .job_post
                   .job_title
@@ -783,4 +782,16 @@ export default {
           height: 44px
           line-height: 44px
           font-size: 1.5rem
+
+  @media screen and (max-device-width : 320px)
+    .home
+      .container
+        .banners
+          .jobs
+            .wrap_jobs
+              & > *
+                .job_post
+                  .job_list
+                    margin-top: 12px
+                    line-height: 1.8
 </style>
